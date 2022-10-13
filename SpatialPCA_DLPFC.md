@@ -1,10 +1,3 @@
----
-layout: default
-title: DLPFC Analysis
-nav_order: 2
-parent: SpatialPCA
-permalink: /docs/Projects/SpatialPCA/DLPFC
----
 
 Below are the analysis codes for the DLPFC data.
 
