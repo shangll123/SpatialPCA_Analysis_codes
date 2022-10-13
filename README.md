@@ -1,2 +1,2 @@
-# SpatialPCA_Source_data
-The source data for SpatialPCA.
+# SpatialPCA analysis codes
+The analysis codes for SpatialPCA.
