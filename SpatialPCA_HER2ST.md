@@ -1,11 +1,3 @@
----
-layout: default
-title: Breast Tumor Analysis
-nav_order: 5
-has_children: false
-parent: SpatialPCA
-permalink: /docs/Projects/SpatialPCA/HER2ST
----
 
 ## Table of Contents
 - [Load package](#load-package)
