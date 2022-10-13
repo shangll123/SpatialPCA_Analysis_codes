@@ -1,11 +1,4 @@
----
-layout: default
-title: Slide-Seq V2 Analysis
-nav_order: 4
-has_children: false
-parent: SpatialPCA
-permalink: /docs/Projects/SpatialPCA/SlideseqV2
----
+
 
 Below are the analysis codes for the Slide-seq V2 hippocampus data.
 
