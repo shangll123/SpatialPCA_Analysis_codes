@@ -1,11 +1,4 @@
----
-layout: default
-title: Slide-Seq Analysis
-nav_order: 3
-has_children: false
-parent: SpatialPCA
-permalink: /docs/Projects/SpatialPCA/Slideseq
----
+
 
 Below are the analysis codes for the Slide-seq cerebellum data.
 
