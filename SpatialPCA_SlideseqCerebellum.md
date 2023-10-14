@@ -250,7 +250,7 @@ dev.off()
 ##### Marker gene mean expression in each spatial domain (line plot)
 ```R
 
-load("mouseMarkerGenes.rda")
+load("mouseMarkerGenes.rda") # this can be downloaded from the google drive https://drive.google.com/drive/folders/1rFm38-PYY8CwdDVUPpkhzvwpCMs_JhOb, and was originally downloaded from https://github.com/PavlidisLab/markerGeneProfile.
 count = 0
 markers_use = list()
 genename = c()
