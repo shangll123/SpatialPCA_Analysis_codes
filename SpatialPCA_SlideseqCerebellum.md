@@ -249,6 +249,28 @@ dev.off()
 
 ##### Marker gene mean expression in each spatial domain (line plot)
 ```R
+
+load("mouseMarkerGenes.rda")
+count = 0
+markers_use = list()
+genename = c()
+celltypename = c()
+for(celltypes in names(mouseMarkerGenes$Cerebellum)){
+    print(celltypes)
+    count = count + 1
+    markers = mouseMarkerGenes$Cerebellum[[count]]
+    markers_use[[count]] = unique(intersect(rownames(countmat), markers))
+    genename = c(genename, markers_use[[count]])
+    celltypename = c(celltypename, rep(celltypes, length(markers_use[[count]])))
+}
+#names(markers_use) = names(mouseMarkerGenes$Cerebellum)
+dat = na.omit(data.frame(genename, celltypename))
+countmat=sp_count[,match(rownames(SpatialPCA_result$location), colnames(sp_count))]
+matched_gene = unique(intersect(rownames(countmat), genename))
+rowS = rowSums(countmat[match(matched_gene, rownames(countmat)),])
+dat_in = dat[match( names(rowS)[order(-rowS)], dat$genename),]
+
+
 cbp_spatialpca=c("#66C2A5", "lightyellow2", "cornflowerblue" ,"#E78AC3", "skyblue1" ,"#FFD92F" ,"lightcyan2", "coral")
 countmat = sp_count[,match(colnames(SpatialPCA_result$normalized_expr), colnames(sp_count))]
 dat_in = dat_in[which(dat_in$genename %in% c("Olig2","Cbln3","Eomes","Otx2","Calb1","Ntn1")),]
